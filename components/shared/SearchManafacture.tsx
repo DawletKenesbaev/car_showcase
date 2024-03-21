@@ -1,6 +1,9 @@
 import React from 'react'
-
-const SearchManafacture = () => {
+interface Props {
+    manafacturer:string;
+    setManafacturer: (manafacturer:string) => void
+}
+const SearchManafacture = ({manafacturer,setManafacturer}:Props) => {
   return (
     <div>SearchManafacture</div>
   )

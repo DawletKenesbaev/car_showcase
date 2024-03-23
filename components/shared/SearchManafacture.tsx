@@ -6,7 +6,10 @@ interface Props {
 }
 const SearchManafacture = ({manafacturer,setManafacturer}:Props) => {
   return (
-    <div>SearchManafacture</div>
+    <div>
+
+      <
+    </div>
   )
 }
 

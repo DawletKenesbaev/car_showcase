@@ -8,7 +8,9 @@ const SearchManafacture = ({manafacturer,setManafacturer}:Props) => {
   return (
     <div>
 
-      <
+      <div>
+        Search
+      </div>
     </div>
   )
 }

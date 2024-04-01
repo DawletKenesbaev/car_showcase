@@ -12,13 +12,13 @@ interface Props {
     rightIcon?:string;
     isDisabled?:boolean;
 }
-const CustomButton = ({title,containerStyles,handleClick,textStyles,rightIcon, btnType='button'}:Props) => {
+const CustomButton = ({title,containerStyles,handleClick,textStyles,rightIcon, btnType='button'}:Props) => {  
   return (
     <button 
     disabled={false}
     type={btnType}
     className={`custom-btn ${containerStyles}`}
-    onClick={()=>{}}
+    onClick={handleClick}
     >
         <span className={`flex-1 ${textStyles}`}>
           {title}

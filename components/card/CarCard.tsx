@@ -2,23 +2,24 @@
 import Image from "next/image"
 import { useState } from "react"
 import CustomButton from "../shared/CustomButton"
-import { calculateCarRent } from "@/utils"
+import { calculateCarRent, generateCarImageUrl } from "@/utils"
 import CardDetails from "./CardDetails"
+export interface CardProps {
+    city_mpg: number,
+    class: string,
+    combination_mpg: number,
+    cylinders: number,
+    displacement: number,
+    drive: string,
+    fuel_type: string,
+    highway_mpg: number,
+    make: string,
+    model: string,
+    transmission: string,
+    year: number
+}
 interface Props {
-    car:{
-        city_mpg: number,
-        class: string,
-        combination_mpg: number,
-        cylinders: number,
-        displacement: number,
-        drive: string,
-        fuel_type: string,
-        highway_mpg: number,
-        make: string,
-        model: string,
-        transmission: string,
-        year: number
-    }
+    car:CardProps
 }
 const CarCard = ({car}:Props) => {
     const [isOpen, setIsOpen] = useState(false)
@@ -42,7 +43,7 @@ const CarCard = ({car}:Props) => {
         </p>
         <div className="relative w-full h-40 my-3 object-contain">
            <Image 
-            src='/hero.png'
+            src={generateCarImageUrl(car)}
             alt="car model"
             fill
             priority
@@ -97,7 +98,11 @@ const CarCard = ({car}:Props) => {
               />
           </div>
         </div>
-        <CardDetails />
+        <CardDetails 
+         isOpen={isOpen}
+         closeModal={() => setIsOpen(false)}
+         car={car}
+         />
     </div>
   )
 }

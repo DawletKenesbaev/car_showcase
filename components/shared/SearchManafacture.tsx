@@ -19,23 +19,22 @@ const SearchManafacture = ({manafacturer,setManafacturer}:Props) => {
    )
   )
   return (
-    <div className='search-manafacturer'>
+    <div className='search-manufacturer'>
       <Combobox
       onChange={setManafacturer}
        value={manafacturer}
       >
-        <div className='relative w-full'>
-            <Combobox.Button className='absolute top=[14px]'>
+        <div className='relative w-full '>
+            <Combobox.Button className='absolute top-[14px]'>
                <Image
                 src='/car-logo.svg'
                 alt='logo'
                 width={20}
                 height={20}
-                className='ml-4'
                />
             </Combobox.Button>
             <Combobox.Input
-             className='search-manafacturer__input'
+             className='search-manufacturer__input outline-none'
              placeholder='Volkswagen'
              displayValue={(manafacturer:string)=> manafacturer}
              onChange={(e) => setQuery(e.target.value)}

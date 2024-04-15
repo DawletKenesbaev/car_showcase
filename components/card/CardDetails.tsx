@@ -10,9 +10,12 @@ interface Props {
   closeModal:()=>void;
   car:CardProps
 }
+/// just a test delete it
 const CardDetails = ({isOpen,closeModal,car}:Props) => {  
   return (
     <>
+
+    
       <Transition appear show={isOpen} as={Fragment}>
           <Dialog
            className='relative z-10 '

@@ -7,7 +7,7 @@ import { fetchCars } from "@/utils";
 export default async function Home() {
   const allCars  = await fetchCars();
   
-  
+  ///
   return (
     <main className="overflow-hidden">
         <Hero />

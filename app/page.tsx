@@ -4,10 +4,14 @@ import SearchBar from "@/components/SearchBar";
 import CarCard from "@/components/card/CarCard";
 import { fetchCars } from "@/utils";
 
+
+
+
+
 export default async function Home() {
   const allCars  = await fetchCars();
   
-  ///
+  ///start
   return (
     <main className="overflow-hidden">
         <Hero />

@@ -20,7 +20,7 @@ export interface CardProps {
 }
 interface Props {
     car:CardProps
-}
+}[]
 const CarCard = ({car}:Props) => {
     const [isOpen, setIsOpen] = useState(false)
   const {city_mpg,year,model,transmission,drive,make} = car

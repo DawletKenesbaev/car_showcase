@@ -10,9 +10,7 @@ import { fetchCars } from "@/utils";
 
 export default async function Home() {
   const allCars  = await fetchCars();
-  
-  ///start
-  return (
+    return (
     <main className="overflow-hidden">
         <Hero />
         <div className="mt-12 padding-x padding-y
@@ -36,8 +34,8 @@ export default async function Home() {
               allCars.length > 0 ? (
                 <div className="home__cars-wrapper">
                   {
-                      allCars.map((car:any) => (
-                        <CarCard car={car} />
+                      allCars.map((car:any,index:number) => (
+                        <CarCard key={index} car={car} />
                       ))
                   }
                 </div>

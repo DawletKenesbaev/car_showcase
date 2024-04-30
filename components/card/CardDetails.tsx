@@ -10,7 +10,6 @@ interface Props {
   closeModal:()=>void;
   car:CardProps
 }
-/// just a test delete it
 const CardDetails = ({isOpen,closeModal,car}:Props) => {  
   return (
     <>
